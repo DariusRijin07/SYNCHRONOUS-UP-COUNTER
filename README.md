@@ -1,18 +1,16 @@
-# SYNCHRONOUS-UP-COUNTER
-## DEVELOPED BY: Darius Rijin I
-## REGISTER NUMBER: 212223230037
+### SYNCHRONOUS-UP-COUNTER
 
-## AIM:
+**AIM:**
 
 To implement 4 bit synchronous up counter and validate functionality.
 
-## SOFTWARE REQUIRED:
+**SOFTWARE REQUIRED:**
 
 Quartus prime
 
-## THEORY:
+**THEORY**
 
-## 4 bit synchronous UP Counter:
+**4 bit synchronous UP Counter**
 
 If we enable each J-K flip-flop to toggle based on whether or not all preceding flip-flop outputs (Q) are “high,” we can obtain the same counting sequence as the asynchronous circuit without the ripple effect, since each flip-flop in this circuit will be clocked at exactly the same time:
 
@@ -28,25 +26,20 @@ Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and 
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
-## Procedure:
+**Procedure**
 
+/* write all the steps invloved */
+
+**PROGRAM**
+
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+
+Developed by:Darius Rijin I
+
+RegisterNumber:212223230037
+*/
 ```
-1.Initialize the shift register to a known state (e.g., all zeros).
-
-2.Input a bit serially into the shift register.
-
-3.Shift the contents of the register one position to the right (or left).
-
-4.Output the shifted bit from the last stage of the register.
-
-5.Repeat steps 2-4 for each bit you want to input and shift.
-```
-
-## PROGRAM:
- Program for flipflops and verify its truth table in quartus using Verilog programming. 
-
-```
-module exp11(out,clk,rstn);
+module ex11(out,clk,rstn);
 input clk,rstn;
 output reg [3:0]out;
 always @ (posedge clk)
@@ -58,16 +51,18 @@ begin
 end
 endmodule
 ```
-## RTL LOGIC UP COUNTER:
-![325559752-6766a5b3-e8be-425b-8991-9c1564ec02fb](https://github.com/mohammadshahil09/SYNCHRONOUS-UP-COUNTER/assets/149347704/04e3c990-074d-4ae5-99d7-5c2b79b4bc3e)
 
-## TIMING DIAGRAM FOR IP COUNTER:
-
-![325559934-ab6c6174-1052-4905-a271-09797eae8c39](https://github.com/mohammadshahil09/SYNCHRONOUS-UP-COUNTER/assets/149347704/128de7b7-6e57-42d8-a27e-34600aa0275c)
-
-## TRUTH TABLE:
-![325559984-e3f2a515-5eb9-4e89-b1a3-e7f134578777](https://github.com/mohammadshahil09/SYNCHRONOUS-UP-COUNTER/assets/149347704/b75ef146-b4c8-4718-87fa-c3d60f2c4dce)
+**RTL LOGIC UP COUNTER**
+![WhatsApp Image 2024-04-29 at 13 57 17_88f44249](https://github.com/ajinajoshpin/SYNCHRONOUS-UP-COUNTER/assets/148514578/12921b8d-5b1e-49d9-a935-79aa8e4a9370)
 
 
-## RESULTS:
-Thus the program executed successfully.
+**TIMING DIAGRAM FOR IP COUNTER**
+![WhatsApp Image 2024-04-29 at 13 57 26_c2eb8075](https://github.com/ajinajoshpin/SYNCHRONOUS-UP-COUNTER/assets/148514578/fd153ab0-9c05-4990-b727-324f427f3578)
+
+
+**TRUTH TABLE**
+![WhatsApp Image 2024-04-29 at 13 57 34_90b80909](https://github.com/ajinajoshpin/SYNCHRONOUS-UP-COUNTER/assets/148514578/7d42d05b-9322-47cd-b944-f9d92ef03444)
+
+
+**RESULTS**
+The output has been executed successfully.
